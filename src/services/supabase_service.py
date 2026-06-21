@@ -1,9 +1,9 @@
-import config.settings as settings
+import configs.load_env as env
 from supabase import create_client, Client
 from utils.logger import logger
 
 # Cria a conexão com o Supabase
-supabase: Client = create_client(settings.SUPABASE_URL, settings.SUPABASE_KEY)
+supabase: Client = create_client(env.SUPABASE_URL, env.SUPABASE_KEY)
 
 def select_users():
 
@@ -19,5 +19,5 @@ def select_users():
 
     except Exception as e:
 
-        logger.error("Ocorreu um erro ao selecionar os usuários: %s", e)
-        return []
+        logger.error(f"Ocorreu um erro ao selecionar os usuários: \n{e}")
+        return e

@@ -1,6 +1,6 @@
 
-# Cria a mensagem de apresentação
-def presentation_message(data):
+# Cria a mensagem de saudação
+def greeting_message(data):
 
     message = f"Olá, {data["name"]} tudo bem com você?"
 
