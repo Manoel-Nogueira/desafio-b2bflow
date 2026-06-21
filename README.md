@@ -55,11 +55,18 @@ Linux:
 source venv/bin/activate
 ```
 
-Windows:
+Windows:(PowerShell):
 
 ```bash
 .\venv\Scripts\Activate.ps1
 ```
+
+Windows(CMD):
+
+```bash
+.\venv\Scripts\activate.bat
+```
+> Caso ocorra erro de permissão, execute o seguinte comando `Set-ExecutionPolicy Bypass -Scope Process` ou `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser`
 
 ### 3. Instalar as dependências
 
