@@ -17,8 +17,8 @@ def select_users():
 
     try:
 
-        # Seleciona todos os usuários da tabela "users"
-        response = supabase.table("users").select("*").execute()
+        # Seleciona o "name" e o "number" de todos os usuários da tabela "users"
+        response = supabase.table("users").select("name, number").execute()
         logger.info("Usuários selecionados com sucesso")
 
         return response.data
