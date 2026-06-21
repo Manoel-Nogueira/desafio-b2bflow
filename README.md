@@ -44,7 +44,7 @@ ZAPI_INSTANCE_TOKEN=
 ### 1. Criar o ambiente virtual
 
 ```bash
-python -m venv .venv
+python -m venv venv
 ```
 
 ### 2. Ativar o ambiente virtual
@@ -52,13 +52,13 @@ python -m venv .venv
 Linux:
 
 ```bash
-source .venv/bin/activate
+source venv/bin/activate
 ```
 
 Windows:
 
 ```bash
-.venv\Scripts\activate
+.\venv\Scripts\Activate.ps1
 ```
 
 ### 3. Instalar as dependências
