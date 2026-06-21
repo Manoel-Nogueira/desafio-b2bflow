@@ -20,6 +20,7 @@ Exemplo:
 | 1  | João  | 5575999999999 |
 
 > Desative o RLS no Supabase.
+
 > O campo `number` deve estar no formato internacional contendo apenas números.
 
 ## Variáveis de ambiente
