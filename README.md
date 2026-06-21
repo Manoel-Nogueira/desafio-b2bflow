@@ -1,0 +1,87 @@
+# Desafio b2bflow
+
+Aplicação desenvolvida em Python para buscar contatos no Supabase e enviar mensagens personalizadas via Z-API.
+
+## Setup da tabela no Supabase
+
+Tabela: `users`
+
+| Campo      | Tipo      |
+| ---------- | --------- |
+| id         | bigint    |
+| name       | text      |
+| number     | text      |
+| created_at | timestamp |
+
+Exemplo:
+
+| id | name  | number        |
+| -- | ----- | ------------- |
+| 1  | João  | 5575999999999 |
+| 2  | Maria | 5575988888888 |
+
+> O campo `number` deve estar no formato internacional contendo apenas números.
+
+## Variáveis de ambiente
+
+Crie um arquivo `.env` na raiz do projeto:
+
+```env
+# URL do projeto no Supabase
+SUPABASE_URL=
+
+# Chave de acesso ao Supabase
+SUPABASE_KEY=
+
+# ID da instância do Z-api
+ZAPI_INSTANCE_ID=
+
+# Token de acesso à instância do Z-api
+ZAPI_INSTANCE_TOKEN=
+```
+
+## Como rodar
+
+### 1. Criar o ambiente virtual
+
+```bash
+python -m venv .venv
+```
+
+### 2. Ativar o ambiente virtual
+
+Linux:
+
+```bash
+source .venv/bin/activate
+```
+
+Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+### 3. Instalar as dependências
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Executar a aplicação
+
+```bash
+python src/main.py
+```
+
+## Funcionamento
+
+1. Busca os contatos na tabela `users`.
+2. Personaliza a mensagem utilizando o campo `name`.
+3. Envia a mensagem via Z-API para o número armazenado em `number`.
+
+Mensagem enviada:
+
+```text
+Olá, <nome_contato> tudo bem com você?
+```
