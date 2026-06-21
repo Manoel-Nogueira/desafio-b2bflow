@@ -6,19 +6,18 @@ Aplicação desenvolvida em Python para buscar contatos no Supabase e enviar men
 
 Tabela: `users`
 
-| Campo      | Tipo      |
-| ---------- | --------- |
-| id         | bigint    |
-| name       | text      |
-| number     | text      |
-| created_at | timestamp |
+| Campo      | Tipo        |
+| ---------- | ----------  |
+| id         | bigint      |
+| name       | varchar     |
+| number     | varchar     |
+| created_at | timestamptz |
 
 Exemplo:
 
 | id | name  | number        |
 | -- | ----- | ------------- |
 | 1  | João  | 5575999999999 |
-| 2  | Maria | 5575988888888 |
 
 > O campo `number` deve estar no formato internacional contendo apenas números.
 
@@ -85,3 +84,5 @@ Mensagem enviada:
 ```text
 Olá, <nome_contato> tudo bem com você?
 ```
+
+Developed by **Manoel Nogueira Melo Filho**
