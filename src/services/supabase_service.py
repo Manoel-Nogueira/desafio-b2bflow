@@ -1,15 +1,9 @@
-import os
+import config.settings as settings
 from supabase import create_client, Client
-from dotenv import load_dotenv
 from utils.logger import logger
 
-# Carrega variáveis de ambiente do arquivo .env
-load_dotenv()
-URL = os.getenv("SUPABASE_URL")
-KEY = os.getenv("SUPABASE_KEY")
-
 # Cria a conexão com o Supabase
-supabase: Client = create_client(URL, KEY)
+supabase: Client = create_client(settings.SUPABASE_URL, settings.SUPABASE_KEY)
 
 def select_users():
 
